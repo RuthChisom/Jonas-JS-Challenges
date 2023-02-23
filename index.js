@@ -35,7 +35,8 @@ multiple line 🤪`);
 
 
 // Coding Challenge 2
-console.log(`CHALLENGE 2`);
+console.log(`
+CHALLENGE 2`);
 
 if(markHigherBMI){
     console.log(`Mark's BMI (${BMIMark}) is higher than John's (${BMIJohn})!`);
@@ -44,7 +45,8 @@ else console.log(`John's BMI (${BMIJohn}) is higher than Mark's (${BMIMark})!`);
 
 
 // Coding Challenge 3
-console.log(`CHALLENGE 3`);
+console.log(`
+CHALLENGE 3`);
 
 // TEST DATA
 const firstScoreDolphin = 96;
@@ -81,6 +83,8 @@ else console.log(`There is NO winner, because neither Dolphin ${avgDolphin} nor 
 
 
 // Coding Challenge 4
+console.log(`
+CHALLENGE 4`);
 
 // TEST DATA 1
 const bill = 275;
@@ -91,8 +95,40 @@ const bill = 275;
 
 const tip = (bill>=50 && bill<=300) ? (.15 * bill) : (.2 * bill);
 
-console.log(`
-The bill is ${bill}
+console.log(`The bill is ${bill}
 The tip is ${tip}
 The total is ${bill + tip}
 `);
+
+
+
+// Coding Challenge 5
+console.log(`
+CHALLENGE 5`);
+
+const calcAverage = (first, second, third) => {return (first + second + third)/3};
+// TEST DATA 1
+const firstScoreofDolphin = 44;
+const secondScoreofDolphin = 23;
+const thirdScoreofDolphin = 71;
+const firstScoreofKoalas = 65;
+const secondScoreofKoalas = 54;
+const thirdScoreofKoalas = 49;
+// TEST DATA 2
+// const firstScoreofDolphin = 85;
+// const secondScoreofDolphin = 54;
+// const thirdScoreofDolphin = 41;
+// const firstScoreofKoalas = 23;
+// const secondScoreofKoalas = 34;
+// const thirdScoreofKoalas = 27;
+
+const avgScoreDolphin = calcAverage(firstScoreofDolphin, secondScoreofDolphin, thirdScoreofDolphin);
+const avgScoreKoalas = calcAverage(firstScoreofKoalas, secondScoreofKoalas, thirdScoreofKoalas);
+
+const checkWinner = (Dolphin, Koalas) => {
+    if(Dolphin >= Koalas * 2) return `Dolphin wins (${Dolphin} vs. ${Koalas})`;
+    else if(Koalas >= Dolphin * 2) return `Koalas wins (${Koalas} vs. ${Dolphin})`;
+    else return `Nobody wins (${Dolphin} vs. ${Koalas })`
+}
+console.log(checkWinner(avgScoreDolphin, avgScoreKoalas));
+
