@@ -125,10 +125,32 @@ const thirdScoreofKoalas = 49;
 const avgScoreDolphin = calcAverage(firstScoreofDolphin, secondScoreofDolphin, thirdScoreofDolphin);
 const avgScoreKoalas = calcAverage(firstScoreofKoalas, secondScoreofKoalas, thirdScoreofKoalas);
 
-const checkWinner = (Dolphin, Koalas) => {
+const checkWinner = (Dolphin, Koalas) => { 
+    //i had to use return in an arrow function because i have curly braces for the multiple lines of code
     if(Dolphin >= Koalas * 2) return `Dolphin wins (${Dolphin} vs. ${Koalas})`;
     else if(Koalas >= Dolphin * 2) return `Koalas wins (${Koalas} vs. ${Dolphin})`;
     else return `Nobody wins (${Dolphin} vs. ${Koalas })`
 }
 console.log(checkWinner(avgScoreDolphin, avgScoreKoalas));
 
+
+
+// Coding Challenge 6
+console.log(`
+CHALLENGE 6`);
+
+let tipValue;
+const calcTip = (bill) => 
+    // return (bill>=50 && bill<=300) ? tipValue = 0.15 * bill : tipValue = 0.2 * bill;
+    tipValue = (bill>=50 && bill<=300) ? 0.15 * bill : 0.2 * bill;
+
+console.log(calcTip(100));
+
+const bills = [125, 555, 44];
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+
+console.log(tips);
+
+const totalArray = [(bills[0]+tips[0]), (bills[1]+tips[1]), (bills[2]+tips[2])];
+
+console.log(totalArray);
